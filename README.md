@@ -10,6 +10,19 @@ AgentMedic is built for **production-ready agentic systems** where performance s
 - **Delta Analysis:** Maintains a persistent historical baseline, automatically flagging performance regressions (duration or token inflation) against previous runs.
 - **Structural Enforcement:** Validates agent output against strictly defined schemas (JSON/Markdown) to ensure predictable downstream integration.
 
+- agentmedic/
+├── config/              # Environment and threshold specifications
+│   ├── env.yaml         # Sensitive keys and system constraints
+│   └── metrics.yaml     # Baseline performance thresholds
+├── src/                 # Core engine logic
+│   ├── core/            # Sub-process orchestration & lifecycle management
+│   ├── telemetry/       # Data collection, logging, and state snapshots
+│   └── analysis/        # Delta Analysis and regression logic
+├── tests/               # Unit tests for the harness itself
+├── assets/              # Visualization samples and architecture diagrams
+├── requirements.txt     # Pin-down dependencies
+└── main.py              # CLI entry point for executing test batches
+
 ## 📊 Performance Matrix (Example)
 The framework generates a scannable performance matrix for every execution suite:
 
